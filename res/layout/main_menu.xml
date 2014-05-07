@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/left_bg" >
-    
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/left_bg"
+    android:orientation="vertical" >
+
     <RelativeLayout
         android:id="@+id/login_layout"
         android:layout_width="fill_parent"
@@ -12,6 +12,7 @@
         android:clickable="true"
         android:gravity="center_vertical"
         android:orientation="horizontal" >
+
         <ImageView
             android:id="@+id/user_photo"
             android:layout_width="50dip"
@@ -28,9 +29,10 @@
             android:layout_toRightOf="@+id/user_photo"
             android:drawablePadding="3dip"
             android:paddingTop="10dip"
-            android:text="@string/text_loading"
+            android:text="加载中..."
             android:textColor="@color/gray_white"
             android:textSize="16sp" />
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -56,20 +58,22 @@
                 android:textColor="@color/gray_white"
                 android:textSize="14sp" />
         </LinearLayout>
-        
-        <ExpandableListView
-	        android:id="@+id/menu_list"
-	        android:layout_width="fill_parent"
-	        android:layout_height="0dip"
-	        android:cacheColorHint="@color/transparent"
-	        android:childDivider="@drawable/list_divider"
-	        android:childIndicator="@null"
-	        android:groupIndicator="@null"
-	        android:listSelector="@drawable/left_list_item_bg"
-	        android:scrollbars="none" >
-    	</ExpandableListView>
-    	
-        <LinearLayout
+    </RelativeLayout>
+
+    <ExpandableListView
+        android:id="@+id/menu_list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:cacheColorHint="@color/transparent"
+        android:childDivider="@drawable/list_divider"
+        android:childIndicator="@null"
+        android:groupIndicator="@null"
+        android:listSelector="@drawable/left_list_item_bg"
+        android:scrollbars="none" >
+    </ExpandableListView>
+
+    <LinearLayout
         android:id="@+id/btnLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -88,6 +92,5 @@
             android:textColor="@color/white"
             android:textSize="20sp" />
     </LinearLayout>
-    </RelativeLayout>
 
 </LinearLayout>
